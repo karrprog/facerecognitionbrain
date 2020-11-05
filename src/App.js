@@ -81,15 +81,6 @@ class App extends Component {
     this.setState({imageUrl: this.state.input});
     app.models
     .predict(
-
-
-
-
-
-
-
-
-
       Clarifai.FACE_DETECT_MODEL, {base64: "G7p3m95uAl..."},
       this.state.input)
       .then(response => {
@@ -106,7 +97,6 @@ class App extends Component {
           .then(count => {
             this.setState(Object.assign(this.state.user, { entries: count}))
           })
-
         }
         this.displayFaceBox(this.calculateFaceLocation(response))
       })
